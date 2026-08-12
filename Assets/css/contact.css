@@ -1,0 +1,122 @@
+*{
+    background-color: #3a0614;
+}
+header{
+    text-align: left;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+#hri{
+    width: 8%;
+    border: 1px solid #e8c14a;
+    margin-left: 0;
+}
+h1{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fdf2f4;
+    font-size: 3rem;
+}
+p{
+    color: #e8c14a;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+.container{
+    margin-left: 100px;
+    margin-top: 40px;
+    display: flex;
+    margin-right: 100px;
+}
+img{
+    border: 1px solid #fdf2f4;
+    width: 80%;
+    height: 180px;
+}
+.image{
+    width: 50%;
+}
+.saisie{
+    width: 50%;
+    padding: 10px;
+    margin: 0;
+}
+.Data{
+    display: flex;
+}
+label{
+    color: #e8c14a;
+    font-size: 0.8rem;
+    margin: 20px;
+}
+#nom{
+    border: 2px solid #fdf2f4;
+    width: 40%;
+    height: 36px;
+}
+#sujet{
+    border: 2px solid #e8c14a;
+    width: 100%;
+    height: 40px;
+}
+#message{
+    border: 2px solid #fdf2f4;
+    width: 100%;
+    height: 144px;
+    text-align: left;
+}
+button{
+    background-color: #e8c14a;
+    border: 2px solid #e8c14a;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 40px;
+}
+.information{
+    width: 50%;
+    margin-top: 36px;
+
+}
+.text{
+    color: #e8c14a;
+    font-size: 1.2rem;
+}
+.text1{
+    color: #fdf2f4;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+.horaire{
+    margin-left: 100px;
+    margin-top: 10px;
+    width: 35%;
+}
+h2{
+  color: #e8c14a;
+    font-size: 1rem;  
+}
+.text2{
+    color: #fdf2f4;
+    font-size: 0.9rem;
+}
+.heure{
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+}
+#time{
+    display: flex;
+    height: 16px;
+    justify-content: end;
+    color: #e8c14a;
+    width: 100%;
+    margin-top: 16px;
+}
+#hr1{
+    width: 100%;
+    border: 0.2px solid #5c0a20;
+    margin-bottom: 0;
+    margin-top: 0;
+}
