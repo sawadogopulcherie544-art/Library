@@ -1,7 +1,58 @@
 *{
-    background-color: #3a0614;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   background-color: #3a0614;
 }
 header{
+    background-color: #3a0614;
+    height: 10vh;
+    display: flex;
+}
+.royal{
+    width: 36px;
+    border: 2px solid #e8c14a;
+    background-color: #e8c14a;
+    height: 36px;
+    margin-left: 100px;
+    margin-top: 16px;
+    border-radius: 50%;
+}
+.Site{
+    color: #e8c14a;
+    font-size: 1.4rem;
+    font: bold;
+    letter-spacing: 0ch;
+    margin-top: 20px;
+    margin-left: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+nav{
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 600px;
+    display: flex;
+    gap: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+a{
+    color: #fce7eb;
+    text-decoration: none;
+}
+a:hover{
+    color: #e8c14a;
+    border-bottom:2px solid #e8c14a;
+}
+#firstRow{
+    border: none;
+    border-top: 0.5px solid #710720;
+
+}
+.head{
+    background-color: #3a0614;
     text-align: left;
     margin-top: 60px;
     margin-left: 100px;

@@ -1,15 +1,63 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;;
+    box-sizing: border-box;
 }
-.header{
+header{
+    background-color: #3a0614;
+    height: 10vh;
+    display: flex;
+}
+.royal{
+    width: 36px;
+    border: 2px solid #e8c14a;
+    background-color: #e8c14a;
+    height: 36px;
+    margin-left: 100px;
+    margin-top: 16px;
+    border-radius: 50%;
+}
+.Site{
+    color: #e8c14a;
+    font-size: 1.4rem;
+    font: bold;
+    letter-spacing: 0ch;
+    margin-top: 20px;
+    margin-left: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+nav{
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 600px;
+    display: flex;
+    gap: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+a{
+    color: #fce7eb;
+    text-decoration: none;
+}
+a:hover{
+    color: #e8c14a;
+    border-bottom:2px solid #e8c14a;
+}
+#firstRow{
+    border: none;
+    border-top: 0.5px solid #710720;
+
+}
+.head{
+    margin: auto;
+    justify-content: center;
+    text-align: center;
     position: relative;
     width: 100%;
     height: 50vh;
     overflow: hidden;
 }
-.header::before{
+.head::before{
     content: "";
     position: absolute;
     inset: 0;
@@ -29,7 +77,7 @@
     transform: scale(1.1);
     z-index: -1;
 }
-.header::after{
+.head::after{
     content: "";
     position: absolute;
     inset: 0;
@@ -38,30 +86,27 @@
     background-color: rgba(58, 6, 20, 0.6);
     z-index: -1;
 }
-.header h1{
-    margin: auto;
+.head h1{
     padding: 10px 10px;
     color: #fdf2f4;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.2rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia ;
+    margin-bottom: 20px;
 }
-.header p{
-    margin: auto;
-    padding: 10px 10px;
-    color: #a07820;
+.head p{
+    color: #e8c14a;
     text-align: center;
     font-size: 0.8rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    margin-top: 10px;
-    letter-spacing: 1px;
-    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1.6px;
+    font-family: "Times New Roman";
+    font-weight: 700;
 }
-#hr{
+#hr1{
     width: 10%;
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin:auto;
     border: 1px solid #e8c14a;
 }
 .section1{
@@ -83,13 +128,15 @@ p{
     text-align: justify;
     font-size: 1rem;
     letter-spacing: 0.5px;
+    font-family: "Times New Roman";
 }
 h2{
     text-align: left;
     margin-top: 20px;
     color: #e8c14a; 
     margin-left: 30px;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-family: Georgia;
 }
 #image1{
     border: 2px solid #e8c14a;
@@ -99,7 +146,7 @@ h2{
     margin-left: 20px;
 }
  .section2{
-    background-color: #5c0a20;
+    background-color: rgba(78, 9, 27, 1);
     margin-top: 0;
     margin-bottom: 0;
     display: flow-root;
@@ -138,12 +185,14 @@ h3{
     color: #e8c14a;
     margin-left: 30px;
     margin-top: 10px;
+    font-family: Georgia;
 }
 .story{
     color: #fce7eb;
     margin-left: 30px;
     margin-right: 30px;
     font-size: 1rem;
+    font-family: 'Times New Roman';
 }
 .date{
     margin: auto;
@@ -152,6 +201,7 @@ h3{
     text-align: center;
     font-size: 2rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-family: 'Times New Roman';
 }
 .section3{
     background-color: #3a0614;
@@ -170,6 +220,7 @@ h3{
     font-size: 3rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     margin-bottom: 60px;
+    font-family: 'Times New Roman';
 
 }
 .first2{
@@ -180,6 +231,7 @@ h3{
     font-size: 1rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     letter-spacing: 1px;
+    font-family: 'Times New Roman';
 }
 .member-image{
     border: 2px solid #fdf2f4;
@@ -195,6 +247,7 @@ h4{
     color: #fdf2f4;
     margin-top: 10px;
     margin-bottom: 2px;
+    font-family: Georgia;
 }
 h5{
     margin: auto;
@@ -204,7 +257,8 @@ h5{
     white-space: nowrap;
     color: #fdf2f4;
     margin-top: 10px;
-    margin-bottom: 4px;;
+    margin-bottom: 4px;
+    font-family: Georgia;
 }
 .member{
     margin: auto;
@@ -216,6 +270,8 @@ h5{
     text-align: center;
     white-space: nowrap;
     font-size: 1.2rem;
+    font-family: 'Times New Roman';
+    font-weight:700;
 }
 .duree{
     margin: auto;
@@ -223,4 +279,5 @@ h5{
     text-align: center;
     white-space: nowrap;
     font-size: 1rem;
+    font-family: 'Times New Roman';
 }
