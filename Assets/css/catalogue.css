@@ -1,0 +1,447 @@
+
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Georgia", "Times New Roman", serif;
+}
+
+/* Conteneur principal de la navbar */
+.navbar {
+    position: fixed;    /* Fixer le menu quand on scroll sur la page  */
+    top: 0;             
+    left: 0;            
+    width: 100%;       
+    z-index: 1000;      /* S'assure que le menu passe au-dessus de tout le reste du contenu */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4A0E17; 
+    padding: 15px 50px;
+    height: 80px;
+    border-bottom: 2px solid #E08F3E; 
+}
+
+/* Alignement du logo et du texte */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cercle-logo{
+    height: 45px;
+    width: 45px;
+    object-fit: contain; /*redimensionner l'image pour qu'elletienne dans son conteneur*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF8F0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #E08F3E;
+}
+
+.circle{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* Style du bloc de texte à gauche */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text .title {
+    color: #E08F3E;  
+    font-size: 1.25rem; /*1rem = 16px*/
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logo-text .subtitle {
+    color: #FFF8F0;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+}
+
+/* Style des liens de navigation */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    color: #FFF8F0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+/* Effet survol et onglet actif */
+.nav-item:hover, .nav-item.active {
+    color: #E08F3E;
+}
+
+.nav-item.active {
+    border-bottom: 2px solid #E08F3E;
+}
+
+
+
+
+
+/* ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ */
+.bloc{
+    background-color: #4A0E17;
+    height: 800px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.grand-conteneur{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.conteneur1{
+    margin-bottom: 10px;
+}
+
+.conteneur2{
+    margin-bottom: 10px;
+}
+
+.conteneur2 .search-filter-form{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.search-input-wrap input{
+    width: 500px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #FFF8F0;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.category-select{
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #FFF8F0;
+    border: 1px solid #FFF8F0;
+}
+
+.checkbox-wrap{
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    color: #FFF8F0;
+}
+
+
+.fonds{
+    font-size: 7px;
+    color: #E08F3E;
+    letter-spacing: 2px;
+}
+
+.cat{
+    font-size: 30px;
+    color: #FFF8F0;
+}
+
+.cat span{
+    text-decoration: underline;
+    text-decoration-color: #E08F3E;
+    text-underline-offset: 6px;
+}
+
+.diponibles{
+    color: #4A0E17;
+    font-size: 8px;
+}
+
+
+
+
+
+
+
+/*Partie des livres*/
+/*section 1*/
+.livres-section1{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    gap: 10px;
+}
+
+.livres-section1 .victor{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('les_miserables.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease; /* Durée et fluidité du zoom */
+}
+
+.livres-section1 .damas{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('monte_cristo.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease;
+}
+
+.livres-section1 .flaubert{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('madame_bovary.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease;
+}
+
+.livres-section1 .hugo{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('notre_dame_de_paris.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease;
+}
+
+.infor_book{
+    width: 100%;
+    height: 30%;
+    background-color: rgba(74, 14, 23, 0.98);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+.infor_book .type{
+    color: #E08F3E;
+    font-size: 10px;
+    /*importer une font family*/
+}
+
+
+.infor_book .titre{
+    color: #FFF8F0;
+    font-size: 15px;
+    /*importer une font family*/
+}
+
+.damas .infor_book .titre{
+    color: #FFF8F0;
+    font-size: 10px;
+}
+
+.infor_book .auteur{
+    color: #FFF8F0;
+    font-size: 8px;
+}
+
+
+.victor:hover{
+    background-size: 120%; /* Agrandit l'image de 20% au survol */
+    border: 1px solid #E08F3E;
+}
+
+.damas:hover{
+    background-size: 120%;
+    border: 1px solid #E08F3E;
+}
+.flaubert:hover{
+    background-size: 120%; 
+    border: 1px solid #E08F3E;
+}
+.hugo:hover{
+    background-size: 120%;
+    border: 1px solid #E08F3E; 
+}
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*section 2*/
+.livres-section2{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    gap: 10px;
+}
+
+
+.livres-section2 .zola{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('germinal.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease; /* Durée et fluidité du zoom */
+}
+
+.livres-section2 .voltaire{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('candide.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease;
+}
+
+.livres-section2 .camus{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('l\'etranger.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease;
+}
+
+.livres-section2 .guy{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('bel_ami.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease;
+}
+
+.infor_book{
+    width: 100%;
+    height: 30%;
+    background-color: rgba(74, 14, 23, 0.98);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+.infor_book .type{
+    color: #E08F3E;
+    font-size: 10px;
+    /*importer une font family*/
+}
+
+
+.infor_book .titre{
+    color: #FFF8F0;
+    font-size: 15px;
+    /*importer une font family*/
+}
+
+
+.infor_book .auteur{
+    color: #B1A7A6;
+    font-size: 8px;
+}
+
+.zola:hover{
+    background-size: 120%; /* Agrandit l'image de 20% au survol */
+    border: 1px solid #E08F3E;
+}
+
+.voltaire:hover{
+    background-size: 120%;
+    border: 1px solid #E08F3E;
+}
+.camus:hover{
+    background-size: 120%; 
+    border: 1px solid #E08F3E;
+}
+.guy:hover{
+    background-size: 120%;
+    border: 1px solid #E08F3E; 
+}
+
+.victor:hover .titre,.damas:hover .titre, .flaubert:hover .titre, .hugo:hover .titre {
+    color: #E08F3E;
+}
+
+.zola:hover .titre,.voltaire:hover .titre, .camus:hover .titre, .guy:hover .titre {
+    color: #E08F3E;
+}
+
+
+
+
+
+
+.disponible{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 9px;
+    background-color: #E08F3E;
+    padding: 3px;
+    color: #9E2A2B;
+}
+
+.emprunt{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 9px;
+    background-color: #9E2A2B;
+    padding: 3px;
+    color: #FFF8F0;
+}
