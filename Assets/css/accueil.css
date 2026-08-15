@@ -1,0 +1,557 @@
+/* ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ */
+/* Partie I */
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Georgia", "Times New Roman", serif;
+}
+
+/* Conteneur principal de la navbar */
+.navbar {
+    position: fixed;    /* Fixer le menu quand on scroll sur la page  */
+    top: 0;             
+    left: 0;            
+    width: 100%;       
+    z-index: 1000;      /* S'assure que le menu passe au-dessus de tout le reste du contenu */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4A0E17; 
+    padding: 15px 50px;
+    height: 80px;
+    border-bottom: 2px solid #E08F3E; 
+}
+
+/* Alignement du logo et du texte */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cercle-logo{
+    height: 45px;
+    width: 45px;
+    object-fit: contain; /*redimensionner l'image pour qu'elletienne dans son conteneur*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF8F0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #E08F3E;
+}
+
+.circle{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* Style du bloc de texte à gauche */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text .title {
+    color: #E08F3E;  
+    font-size: 1.25rem; /*1rem = 16px*/
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logo-text .subtitle {
+    color: #FFF8F0;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+}
+
+/* Style des liens de navigation */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    color: #FFF8F0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+/* Effet survol et onglet actif */
+.nav-item:hover, .nav-item.active {
+    color: #E08F3E;
+}
+
+.nav-item.active {
+    border-bottom: 2px solid #E08F3E;
+}
+
+
+
+/* ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ */
+/*partie II*/
+/* Section Principale avec image de fond */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; 
+    /*Comme le menu occupe une position fixe nous devons faire attention*/
+    /* SOLUTION : On ajoute une marge interne en haut égale à la hauteur du menu (80px) */
+    padding-top: 80px; 
+    background-image: linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.85)), url('fond-bibliotheque.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 60px;
+}
+
+/* Conteneur alignant le texte et l'image */
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+/* Zone de texte */
+.hero-content {
+    flex: 1; /*l'élement va grandir ou rétrecir pour occuper l'espace disponible*/
+    max-width: 550px;
+}
+
+/* Style spécifique pour "FONDÉE EN 1743" */
+.hero-subtitle {
+    color: #E08F3E;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Décalage et changement de style pour l'année 1743 */
+.year-style {
+    font-family: "Times New Roman", serif; /*a modifié après*/
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.1rem;
+    margin-left: 6px; 
+    letter-spacing: 0px;
+}
+
+/* Titre principal */
+.hero-title {
+    color: #FFF8F0;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Paragraphe descriptif */
+.hero-text {
+    color: #FFF8F0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Alignement des deux boutons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Style de base des boutons */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Bouton Plein  */
+.btn-filled {
+    background-color: #E08F3E;
+    color: #4A0E17;
+}
+
+.btn-filled:hover {
+    background-color: #E08F3E;
+}
+
+/* Bouton Contouré */
+.btn-outline {
+    background-color: transparent;
+    color: #E08F3E;
+    border: 1px solid #E08F3E;
+}
+
+.btn-outline:hover {
+    background-color: rgba(197, 160, 89, 0.1);
+}
+
+/* Cadre de l'image de droite */
+.hero-image-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+
+
+/* ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ */
+/* PARTIE III */
+/* Conteneur principal de la section statistiques */
+.stats-section {
+    width: 100%;
+    background-color: #3b0a11;
+    padding: 40px 0; 
+    border-top: 1px solid #E08F3E; 
+    border-bottom: 1px solid #E08F3E;
+}
+
+/* Alignement horizontal et centrage des éléments */
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* Espacement entre les blocs de statistiques */
+    padding: 0 20px;
+}
+
+/* Bloc individuel contenant un chiffre et son texte */
+.stat-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style des grands chiffres  */
+.stat-number {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: #E08F3E; 
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+/* Style des étiquettes en petits caractères */
+.stat-label {
+    color: #E08F3E;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Responsive : passage en deux colonnes ou ligne sur petits écrans */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .stat-item {
+        flex: 1 1 40%; /* Prend environ la moitié de la largeur sur mobile */
+    }
+}
+
+
+
+/* ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ */
+/* PARTIE IV */
+.renseignement{
+    width: 100%;
+    height: 350px;
+    background-color: #4A0E17; 
+}
+
+.affichage{
+    display: flex;
+    flex-direction: column;
+}
+
+.conteneur{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+}
+
+.title .title1{
+    color: #E08F3E;
+    font-size: 12px;
+}
+
+.title .title2{
+    color: #FFF8F0;
+    font-size: 19px;
+}
+
+
+.voir_tout{
+    display: flex;
+    align-items: flex-end;
+    font-size: 14px;
+}
+
+.voir_tout a {
+    color: #C5A059;
+}
+
+
+.livres{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.livres .victor{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('les_miserables.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease; /* Durée et fluidité du zoom */
+}
+
+.livres .damas{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('monte_cristo.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease;
+}
+
+.livres .flaubert{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('madame_bovary.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease;
+}
+
+.livres .hugo{
+    height: 227px;
+    width: 185px;
+    border: 1px solid #FFF8F0;
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('notre_dame_de_paris.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    transition: background-size 0.5s ease;
+}
+
+
+.disponible{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 9px;
+    background-color: #E08F3E;
+    padding: 3px;
+    color: #9E2A2B;
+}
+
+.emprunt{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 9px;
+    background-color: #9E2A2B;
+    padding: 3px;
+    color: #FFF8F0;
+}
+
+.infor_book{
+    width: 100%;
+    height: 30%;
+    background-color: rgba(74, 14, 23, 0.98);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+.infor_book .type{
+    color: #E08F3E;
+    font-size: 10px;
+}
+
+
+.infor_book .titre{
+    color: #FFF8F0;
+    font-size: 15px;}
+
+.damas .infor_book .titre{
+    color: #FFF8F0;
+    font-size: 10px;
+}
+
+.infor_book .auteur{
+    color: #FFF8F0;
+    font-size: 8px;
+}
+
+/*quand on survole chaque div on a un effet sur l'image , sur les bordures et sur le titre du livre*/
+/*exemple avec le livre de Victor Hugo*/
+.victor:hover{
+    background-size: 120%; /* Agrandit l'image de 20% au survol */
+    border: 1px solid #E08F3E;
+}
+
+.damas:hover{
+    background-size: 120%;
+    border: 1px solid #E08F3E;
+}
+.flaubert:hover{
+    background-size: 120%; 
+    border: 1px solid #E08F3E;
+}
+.hugo:hover{
+    background-size: 120%;
+    border: 1px solid #E08F3E; 
+}
+
+.victor:hover .titre,.damas:hover .titre, .flaubert:hover .titre, .hugo:hover .titre {
+    color: #E08F3E;
+}
+
+
+
+
+/* ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ */
+/* PARTIE V */
+.groupe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    background-image: linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.85)), url('img_fond.jpg');
+    border-top: 1px solid #E08F3E;
+    border-bottom: #E08F3E;
+}
+
+.section5{
+    height: 200px;
+}
+
+.sous-conteneur{
+    display: flex;
+    flex-direction: column;
+}
+
+.join{
+    color: #FFF8F0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    /*appliquer une font-family*/
+}
+
+.communaute{
+    color: #E08F3E;
+    font-style: oblique;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.sous-conteneur2{
+    margin: 20px 0;
+    color: #FFF8F0;
+}
+
+.phrase1{
+    text-align: center;
+    font-size: 12px;
+}
+
+.phrase2{
+    text-align: center;
+    font-size: 12px;
+}
+
+.sous-contenueur3{
+    text-align: center;
+}
+
+.sous-contenueur3 .btn{
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    background-color: #E08F3E;
+    transition: 0.5s;
+}
+
+.sous-contenueur3 .btn a {
+    text-decoration: none;
+    color: #3a0614;
+}
+
+.sous-contenueur3 .btn:hover{
+    background-color: #FFF8F0;
+}
