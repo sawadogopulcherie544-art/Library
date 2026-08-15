@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="catalogue.css">
+    <title>Catalogue</title>
+</head>
+<body>
+    
+     <header class="navbar">
+        <!-- Section Logo et Titre -->
+        <div class="nav-logo">
+            <img src="logo.png" alt="Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="title">Bibliothèque Royale</span>
+                <span class="subtitle">DE SAINT-ÉMILIEN</span>
+            </div>
+        </div>
+
+        <!-- Liens de Navigation -->
+        <nav class="nav-links">
+            <a href="#" class="nav-item ">ACCUEIL</a>
+            <a href="#" class="nav-item active">CATALOGUE</a>
+            <a href="#" class="nav-item">À PROPOS</a>
+            <a href="#" class="nav-item">CONTACT</a>
+        </nav>
+    </header>
+
+
+    <section class="bloc">
+        <div class="grand-conteneur">
+            <div class="conteneur1">
+                <div class="fonds">FONDS DOCUMENTAIRE</div>
+                <div class="cat"><span>Cata</span>logue</div>
+            </div>
+            <div class="conteneur2">
+
+                <div class="search-container">
+                    
+                    <!-- Formulaire de filtrage -->
+                    <form class="search-filter-form" onsubmit="event.preventDefault();">
+                        
+                        <!-- Champ texte -->
+                        <div class="search-input-wrap">
+                            <input type="text" placeholder="Rechercher un titre ou un auteur..." class="search-input">
+                        </div>
+
+                        <!-- Menu déroulant -->
+                        <div class="select-input-wrap">
+                            <select class="category-select">
+                                <option value="tous">Tous</option>
+                                <option value="roman">Roman</option>
+                                <option value="aventure">Aventure</option>
+                                <option value="roman-historique">Roman historique</option>
+                                <option value="philosophie">Philosophie</option>
+                            </select>
+                        </div>
+
+                        <!-- Case à cocher -->
+                        <div class="checkbox-wrap">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input">
+                                Disponibles seulement
+                            </label>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+            <div class="conteneur3">
+                <div class="diponibles">8 Ouvrages disponibles</div>
+
+                <!-- /*livres de la premiere ligne*/ -->
+                <div class="livres-section1">
+                    <div class="victor">
+                        <div class="disponible">DISPONIBLE</div>
+                        <div class="infor_book">
+                            <span class="type">ROMAN · 1862</span>
+                            <span class="titre">Les Misérables</span>
+                            <span class="auteur">Victor Hugo</span>  <!--ne pas oublier de changer la police-->
+                        </div>
+                    </div>
+                    <div class="damas">
+                        <div class="emprunt">EMPRUNTÉ</div>
+                        <div class="infor_book">
+                            <span class="type">Aventure · 1844</span>
+                            <span class="titre">Le Comte de Monte-Cristo</span>
+                            <span class="auteur">Alexandre Dumas</span>
+                        </div>
+                    </div>
+                    <div class="flaubert">
+                        <div class="disponible">DISPONIBLE</div>
+                        <div class="infor_book">
+                            <span class="type">Roman · 1857</span>
+                            <span class="titre">Madame Bovary</span>
+                            <span class="auteur">Gustave Flaubert</span>
+                        </div>
+                    </div>
+                    <div class="hugo">
+                        <div class="disponible">DISPONIBLE</div>
+                        <div class="infor_book">
+                            <span class="type">Roman historique · 1831</span>
+                            <span class="titre">Notre-Dame de Paris</span>
+                            <span class="auteur">Victor Hugo</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- /*livre 2e ligne*/ -->
+                <div class="livres-section2">
+                    <div class="zola">
+                        <div class="emprunt">EMPRUNTÉ</div>
+                        <div class="infor_book">
+                            <span class="type">Roman · 1885</span>
+                            <span class="titre">Germinal</span>
+                            <span class="auteur">Émile Zola</span>  <!--ne pas oublier de changer la police-->
+                        </div>
+                    </div>
+                    <div class="voltaire">
+                        <div class="disponible">DISPONIBLE</div>
+                        <div class="infor_book">
+                            <span class="type">Philosophie · 1759</span>
+                            <span class="titre">Candide</span>
+                            <span class="auteur">Voltaire</span>
+                        </div>
+                    </div>
+                    <div class="camus">
+                        <div class="disponible">DISPONIBLE</div>
+                        <div class="infor_book">
+                            <span class="type">Roman · 1942</span>
+                            <span class="titre">L'Étranger</span>
+                            <span class="auteur">Albert Camus</span>
+                        </div>
+                    </div>
+                    <div class="guy">
+                        <div class="emprunt">EMPRUNTÉ</div>
+                        <div class="infor_book">
+                            <span class="type">Roman · 1885</span>
+                            <span class="titre">Bel-Ami</span>
+                            <span class="auteur">Guy de Maupassant</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
