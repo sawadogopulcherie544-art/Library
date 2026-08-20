@@ -6,60 +6,103 @@
 body{
    background-color: #3a0614;
 }
-header{
-    background-color: #3a0614;
-    height: 10vh;
+/* Conteneur principal de la navbar */
+.navbar {
+    position: fixed;    /* Fixer le menu quand on scroll sur la page  */
+    top: 0;             
+    left: 0;            
+    width: 100%;       
+    z-index: 1000;      /* S'assure que le menu passe au-dessus de tout le reste du contenu */
+
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a0614; 
+    padding: 15px 50px;
+    height: 80px;
+    border-bottom: 1px solid #E08F3E; 
 }
-.royal{
-    width: 36px;
-    border: 2px solid #e8c14a;
-    background-color: #e8c14a;
-    height: 36px;
-    margin-left: 100px;
-    margin-top: 16px;
+
+/* Alignement du logo et du texte */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cercle-logo{
+    height: 45px;
+    width: 45px;
+    object-fit: contain; /*redimensionner l'image pour qu'elletienne dans son conteneur*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF8F0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #E08F3E;
+}
+
+.circle{
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
-.Site{
-    color: #e8c14a;
-    font-size: 1.4rem;
-    font: bold;
-    letter-spacing: 0ch;
-    margin-top: 20px;
-    margin-left: 8px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-nav{
-    margin-bottom: auto;
-    margin-top: auto;
-    margin-left: 600px;
-    display: flex;
-    gap: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1rem;
-}
-a{
-    color: #fce7eb;
-    text-decoration: none;
-}
-a:hover{
-    color: #e8c14a;
-    border-bottom:2px solid #e8c14a;
-}
-#firstRow{
-    border: none;
-    border-top: 0.5px solid #710720;
 
+/* Style du bloc de texte à gauche */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text .title {
+    color: #E08F3E;  
+    font-size: 1.25rem; /*1rem = 16px*/
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logo-text .subtitle {
+    color: #FFF8F0;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+}
+
+/* Style des liens de navigation */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    color: #FFF8F0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+/* Effet survol et onglet actif */
+.nav-item:hover, .nav-item.active {
+    color: #E08F3E;
+}
+
+.nav-item.active {
+    border-bottom: 2px solid #E08F3E;
 }
 .head{
     background-color: #3a0614;
     text-align: left;
-    margin-top: 60px;
+    margin-top: 140px;
     margin-left: 100px;
 }
 #hri{
     width: 8%;
-    border: 1px solid #e8c14a;
+    border: 1px solid #E08F3E;
     margin-left: 0;
 }
 h1{
@@ -69,7 +112,7 @@ h1{
     font-size: 3rem;
 }
 p{
-    color: #e8c14a;
+    color: #E08F3E;
     font-size: 0.8rem;
     letter-spacing: 1px;
 }
@@ -80,9 +123,9 @@ p{
     margin-right: 100px;
 }
 img{
-    border: 1px solid #fdf2f4;
+    border: 1px solid #710720;
     width: 80%;
-    height: 180px;
+    height: 260px;
 }
 .image{
     width: 50%;
@@ -92,33 +135,34 @@ img{
     padding: 10px;
     margin: 0;
 }
-.Data{
-    display: flex;
-}
 label{
-    color: #e8c14a;
+    color: #FFF8F0;
     font-size: 0.8rem;
-    margin: 20px;
 }
 #nom{
-    border: 2px solid #fdf2f4;
-    width: 40%;
+    border: 2px solid #710720;
+    width: 100%;
     height: 36px;
+    margin-bottom: 24px;
+    background-color: #5c0a20;
 }
 #sujet{
-    border: 2px solid #e8c14a;
+    border: 2px solid #710720;
     width: 100%;
     height: 40px;
+    margin-bottom: 48px;
+    background-color: #5c0a20;
 }
 #message{
-    border: 2px solid #fdf2f4;
+    border: 2px solid #710720;
     width: 100%;
     height: 144px;
     text-align: left;
+    background-color: #5c0a20;
 }
 button{
-    background-color: #e8c14a;
-    border: 2px solid #e8c14a;
+    background-color: #a07820;
+    border: 2px solid #a07820;
     margin-top: 30px;
     margin-bottom: 40px;
     width: 100%;
@@ -130,7 +174,7 @@ button{
 
 }
 .text{
-    color: #e8c14a;
+    color: #E08F3E;
     font-size: 1.2rem;
 }
 .text1{
@@ -145,8 +189,9 @@ button{
     width: 35%;
 }
 h2{
-  color: #e8c14a;
+  color: #E08F3E;
     font-size: 1rem;  
+    margin-bottom: 24px;
 }
 .text2{
     color: #fdf2f4;
@@ -161,7 +206,7 @@ h2{
     display: flex;
     height: 16px;
     justify-content: end;
-    color: #e8c14a;
+    color: #710720;
     width: 100%;
     margin-top: 16px;
 }

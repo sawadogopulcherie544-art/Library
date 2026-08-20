@@ -3,50 +3,96 @@
     padding: 0;
     box-sizing: border-box;
 }
-header{
-    background-color: #3a0614;
-    height: 10vh;
-    display: flex;
+body{
+     font-family: "Georgia", "Times New Roman", serif;
 }
-.royal{
-    width: 36px;
-    border: 2px solid #e8c14a;
-    background-color: #e8c14a;
-    height: 36px;
-    margin-left: 100px;
-    margin-top: 16px;
+/* Conteneur principal de la navbar */
+.navbar {
+    position: fixed;    /* Fixer le menu quand on scroll sur la page  */
+    top: 0;             
+    left: 0;            
+    width: 100%;       
+    z-index: 1000;      /* S'assure que le menu passe au-dessus de tout le reste du contenu */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a0614; 
+    padding: 15px 50px;
+    height: 80px;
+    border-bottom: 1px solid #E08F3E; 
+}
+
+/* Alignement du logo et du texte */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cercle-logo{
+    height: 45px;
+    width: 45px;
+    object-fit: contain; /*redimensionner l'image pour qu'elletienne dans son conteneur*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF8F0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #E08F3E;
+}
+
+.circle{
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
-.Site{
-    color: #e8c14a;
-    font-size: 1.4rem;
-    font: bold;
-    letter-spacing: 0ch;
-    margin-top: 20px;
-    margin-left: 8px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-nav{
-    margin-bottom: auto;
-    margin-top: auto;
-    margin-left: 600px;
-    display: flex;
-    gap: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1rem;
-}
-a{
-    color: #fce7eb;
-    text-decoration: none;
-}
-a:hover{
-    color: #e8c14a;
-    border-bottom:2px solid #e8c14a;
-}
-#firstRow{
-    border: none;
-    border-top: 0.5px solid #710720;
 
+/* Style du bloc de texte à gauche */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text .title {
+    color: #E08F3E;  
+    font-size: 1.25rem; /*1rem = 16px*/
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logo-text .subtitle {
+    color: #FFF8F0;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+}
+
+/* Style des liens de navigation */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    color: #FFF8F0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+/* Effet survol et onglet actif */
+.nav-item:hover, .nav-item.active {
+    color: #E08F3E;
+}
+
+.nav-item.active {
+    border-bottom: 2px solid #E08F3E;
 }
 .head{
     margin: auto;
@@ -96,7 +142,8 @@ a:hover{
     margin-bottom: 20px;
 }
 .head p{
-    color: #e8c14a;
+    margin-top: 160px;
+    color: #E08F3E;
     text-align: center;
     font-size: 0.8rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
@@ -107,7 +154,7 @@ a:hover{
 #hr1{
     width: 10%;
     margin:auto;
-    border: 1px solid #e8c14a;
+    border: 1px solid #E08F3E;
 }
 .section1{
     background-color: rgba(58, 6, 20, 1);
@@ -133,13 +180,13 @@ p{
 h2{
     text-align: left;
     margin-top: 20px;
-    color: #e8c14a; 
+    color: #E08F3E; 
     margin-left: 30px;
     font-size: 1.8rem;
     font-family: Georgia;
 }
 #image1{
-    border: 2px solid #e8c14a;
+    border: 2px solid #E08F3E;
     width: 90%;
     height: 60vh;
     margin-right: 60px;
@@ -165,14 +212,14 @@ input[type="radio"]{
     margin-bottom: 60px;
     background-color:#3a0614;
     appearance: none;
-    border: 2px solid #e8c14a;
+    border: 2px solid #E08F3E;
     border-radius: 50%;
     width: 20px;
     height: 20px;
     transition: 0.3s;
 }
 input[type="radio"]:hover{
-    background-color: #e8c14a;
+    background-color: #E08F3E;
     cursor: pointer;
 }
 label.item{
@@ -182,7 +229,7 @@ label.item{
     cursor: pointer;
 }
 h3{
-    color: #e8c14a;
+    color: #E08F3E;
     margin-left: 30px;
     margin-top: 10px;
     font-family: Georgia;

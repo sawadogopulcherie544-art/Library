@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/df46eb52ff.js" crossorigin="anonymous"></script>
     <title>Contact</title>
     <link rel="stylesheet" href="../Assets/css/contact.css">
 </head>
 <body>
-    <header>
-        <img class="royal" src="../Assets/images/crown.png">
-        <div class="Site">Bibliothèque royale</div>
-        <nav>
-            <a href="accueil.html">ACCUEIL</a>
-            <a href="catalogue.html">CATALOGUE</a>
-            <a href="A_Propos.html">À PROPOS</a>
-            <a href="contact.html">CONTACT</a>
+    <!-- Partie I -->
+    <header class="navbar">
+        <!-- Section Logo et Titre -->
+        <div class="nav-logo">
+            <div class="cercle-logo">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <div class="logo-text">
+                <span class="title">Bibliothèque Royale</span>
+                <span class="subtitle">DE SAINT-ÉMILIEN</span>
+            </div>
+        </div>
+
+        <!-- Liens de Navigation -->
+        <nav class="nav-links">
+            <a href="./accueil.html" class="nav-item active">ACCUEIL</a>
+            <a href="./catalogue.html" class="nav-item">CATALOGUE</a>
+            <a href="./A_Propos.html" class="nav-item">À PROPOS</a>
+            <a href="./contact.html" class="nav-item">CONTACT</a>
         </nav>
     </header>
-    <hr id="firstRow">
     <main>
         <div class="head">
             <p>NOUS ÉCRIRE</p>
@@ -27,7 +38,7 @@
 
         <div class="container">
         <div class="image">
-            <img src="../Assets/images/Cafe.jpg">
+            <img src="../Assets/images/coffee2.jpg">
 
             <div class="information">
             <div class="text">📍    Adresse</div>
@@ -40,15 +51,15 @@
         </div>
 
         <div class="saisie">
-            <div class="Data">
+        
             <label for="name">NOM COMPLET</label>
             <br>
-            <input id="nom" type="text" placeholder="Marie Dupont" required>
+            <input id="nom" type="text" placeholder="Ex: Marie Dupont" required>
             <br>
             <label for="email">EMAIL</label>
             <br>
-            <input id="nom" type="text" placeholder="Marie Dupont07@gmail.com" required>
-            </div>
+            <input id="nom" type="text" placeholder="Ex: Marie Dupont07@gmail.com" required>
+
             <label for="sujet">SUJET</label>
             <br>
             <input id="sujet" type="text" placeholder="Choisir un sujet..." required>

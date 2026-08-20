@@ -22,10 +22,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #4A0E17; 
+    background-color: #3a0614; 
     padding: 15px 50px;
     height: 80px;
-    border-bottom: 2px solid #E08F3E; 
+    border-bottom: 1px solid #E08F3E; 
 }
 
 /* Alignement du logo et du texte */
@@ -112,7 +112,7 @@ body {
     /*Comme le menu occupe une position fixe nous devons faire attention*/
     /* SOLUTION : On ajoute une marge interne en haut égale à la hauteur du menu (80px) */
     padding-top: 80px; 
-    background-image: linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.85)), url('fond-bibliotheque.jpg');
+     background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.85)), url('../images/img1.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -197,7 +197,7 @@ body {
 /* Bouton Plein  */
 .btn-filled {
     background-color: #E08F3E;
-    color: #4A0E17;
+    color: #3a0614;
 }
 
 .btn-filled:hover {
@@ -239,7 +239,7 @@ body {
 /* Conteneur principal de la section statistiques */
 .stats-section {
     width: 100%;
-    background-color: #3b0a11;
+    background-color: #3a0614;
     padding: 40px 0; 
     border-top: 1px solid #E08F3E; 
     border-bottom: 1px solid #E08F3E;
@@ -353,7 +353,7 @@ body {
     height: 227px;
     width: 185px;
     border: 1px solid #FFF8F0;
-    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('les_miserables.jpg');
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('../images/les_miserables.jpg');
     background-position: center;
     background-size: cover;
     display: flex;
@@ -366,7 +366,7 @@ body {
     height: 227px;
     width: 185px;
     border: 1px solid #FFF8F0;
-    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('monte_cristo.jpg');
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('../images/monte_cristo.jpg');
     background-position: center;
     background-size: cover;
     display: flex;
@@ -379,7 +379,7 @@ body {
     height: 227px;
     width: 185px;
     border: 1px solid #FFF8F0;
-    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('madame_bovary.jpg');
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('../images/madame_bovary.jpg');
     background-position: center;
     background-size: cover;
     display: flex;
@@ -392,7 +392,7 @@ body {
     height: 227px;
     width: 185px;
     border: 1px solid #FFF8F0;
-    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('notre_dame_de_paris.jpg');
+    background-image:linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.25)), url('../images/notre_dame_de_paris.jpg');
     background-position: center;
     background-size: cover;
     display: flex;
@@ -487,7 +487,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 300px;
-    background-image: linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.85)), url('img_fond.jpg');
+    background-image: linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.85)), url('../images/img_fond.jpg');
     border-top: 1px solid #E08F3E;
     border-bottom: #E08F3E;
 }
