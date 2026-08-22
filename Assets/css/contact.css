@@ -31,24 +31,17 @@ body{
 }
 
 .cercle-logo{
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 35px;
     object-fit: contain; /*redimensionner l'image pour qu'elletienne dans son conteneur*/
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFF8F0;
-    width: 45px;
-    height: 45px;
     border-radius: 50%;
     background-color: #E08F3E;
 }
 
-.circle{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-}
 
 /* Style du bloc de texte à gauche */
 .logo-text {
@@ -58,20 +51,20 @@ body{
 
 .logo-text .title {
     color: #E08F3E;  
-    font-size: 1.25rem; /*1rem = 16px*/
+    font-size: 16px;
     font-weight: bold;
     letter-spacing: 0.5px;
 }
 
 .logo-text .subtitle {
     color: #FFF8F0;
-    font-size: 0.75rem;
+    font-size: 12px;
     letter-spacing: 1.5px;
     margin-top: 2px;
 }
 
 /* Style des liens de navigation */
-.nav-links {
+.nav_links {
     display: flex;
     gap: 30px;
 }
@@ -79,7 +72,7 @@ body{
 .nav-item {
     color: #FFF8F0;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 1px;
     padding-bottom: 6px;
@@ -145,6 +138,8 @@ label{
     height: 36px;
     margin-bottom: 24px;
     background-color: #5c0a20;
+    padding: 0 10px;
+    color: #FFF8F0;
 }
 #sujet{
     border: 2px solid #710720;
@@ -152,6 +147,8 @@ label{
     height: 40px;
     margin-bottom: 48px;
     background-color: #5c0a20;
+    padding: 0 10px;
+    color: #FFF8F0;
 }
 #message{
     border: 2px solid #710720;
@@ -159,6 +156,8 @@ label{
     height: 144px;
     text-align: left;
     background-color: #5c0a20;
+    padding: 0 10px;
+    color: #FFF8F0;
 }
 button{
     background-color: #a07820;
@@ -167,7 +166,15 @@ button{
     margin-bottom: 40px;
     width: 100%;
     height: 40px;
+    transition: 0.5s;
+    cursor: pointer;
 }
+
+button:hover{
+    background-color: #FFF8F0;
+    border: 2px solid #FFF8F0;
+}
+
 .information{
     width: 50%;
     margin-top: 36px;
@@ -183,36 +190,220 @@ button{
     margin-bottom: 40px;
     margin-left: 30px;
 }
+
 .horaire{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
     margin-left: 100px;
-    margin-top: 10px;
-    width: 35%;
 }
+
 h2{
   color: #E08F3E;
     font-size: 1rem;  
     margin-bottom: 24px;
 }
-.text2{
-    color: #fdf2f4;
-    font-size: 0.9rem;
+
+.ouverture{
+    margin-bottom:10px ;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #5c0a20;
 }
+
 .heure{
-    width: 100%;
-    display: flex;
-    white-space: nowrap;
+    color: #E08F3E;
+    font-weight: bold;
+    font-size: 0.8rem;
 }
-#time{
-    display: flex;
-    height: 16px;
-    justify-content: end;
-    color: #710720;
-    width: 100%;
-    margin-top: 16px;
+
+.jour{
+    color: #FFF8F0;
+    font-size: 0.8rem;
 }
-#hr1{
+
+
+
+/* ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ */
+
+/*Espace vide*/
+.vide{
     width: 100%;
-    border: 0.2px solid #5c0a20;
-    margin-bottom: 0;
-    margin-top: 0;
+    height: 50px;
+    background-color: #3a0614 ;
+}
+
+/*Footer*/
+.content{
+    background-color: #3a0614;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #FFF8F0;
+    padding: 20px ;
+}
+
+
+
+.left h5{
+    color: #E08F3E;
+    margin-bottom: 10px;
+}
+
+.left p{
+    font-size: 13px;
+    color: #FFF8F0;
+    line-height: 1.5;
+}
+
+h6{
+    color: #E08F3E;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.center-left ul, .center-right ul {
+    list-style: none;
+}
+
+.center-left li, .center-right li{
+    font-size: 12px;
+    line-height: 1.5;
+    color: #FFF8F0;
+}
+
+.right li{
+    font-size: 12px;
+    line-height: 1.5;
+    color: #FFF8F0;
+}
+
+.right ul{
+    list-style: none;
+    padding: 22px 0;
+}
+
+.copyright{
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #9E2A2B;
+    background-color: #3a0614;
+    font-size: 12px;
+    color: #9E2A2B;
+}
+
+
+/*Scrollbar CSS*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #E08F3E;
+    border-radius: 5px;  
+}
+
+
+/* ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ */
+/* Partie reponsive */
+@media (max-width:784px){
+    .nav_links{
+        display: none;
+    }
+
+    .menu_toggle{
+        height: 35px;
+        width: 35px;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .menu_toggle::before{
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 25px;
+        background-color: #fff;
+        transform: translateY(-8px);
+        box-shadow: 0 8px #fff;
+        transition: 0.2s;
+    }
+
+    .menu_toggle.active::before{
+        transform: translate(0) rotate(45deg);
+        box-shadow: 0 0 #fff;
+    }
+
+    .menu_toggle::after{
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 25px;
+        background-color: #fff;
+        transform: translateY(8px);
+        transition: 0.2s;
+    }
+
+    .menu_toggle.active::after{
+        transform: translate(0) rotate(-45deg);
+        box-shadow: 0 0 #fff;
+    }
+
+    .nav_links.responsive{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        padding: 10px; 
+        top: 80px;
+        width: 120px;
+        background-color: #3a0614;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .head{
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hri{
+        display: none;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .image{
+        display: none;
+    }
+
+    .information{
+        width: 90%;
+    }
+
+    .saisie{
+        width: 90%;
+    }
+    
+
 }
