@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/df46eb52ff.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../Assets/css/accueil.css">
+    <link rel="stylesheet" href="accueil.css">
     <title>Acceuil</title>
 </head>
 <body>
@@ -22,12 +22,15 @@
             </div>
         </div>
 
+        <!-- menu-responsive -->
+         <div class="menu_toggle"></div>
+
         <!-- Liens de Navigation -->
-        <nav class="nav-links">
-            <a href="./accueil.html" class="nav-item active">ACCUEIL</a>
-            <a href="./catalogue.html" class="nav-item">CATALOGUE</a>
-            <a href="./A_Propos.html" class="nav-item">À PROPOS</a>
-            <a href="./contact.html" class="nav-item">CONTACT</a>
+        <nav class="nav_links">
+            <a href="accueil.html" class="nav-item active">ACCUEIL</a>
+            <a href="catalogue.html" class="nav-item">CATALOGUE</a>
+            <a href="A_Propos.html" class="nav-item">À PROPOS</a>
+            <a href="contact.html" class="nav-item">CONTACT</a>
         </nav>
     </header>
 
@@ -54,7 +57,7 @@
 
             <!-- Bloc image à droite -->
             <div class="hero-image-wrap">
-                <img src="../Assets/images/img1.jpg" alt="Focus Bibliothèque" class="hero-img">
+                <img src="Images/img1.jpg" alt="Focus Bibliothèque" class="hero-img">
             </div>
 
         </div>
@@ -162,5 +165,56 @@
             </div>
         </div>
     </section>
+
+    <!-- /*l"espace vide*/ -->
+    <div class="vide"></div>
+
+    <footer>
+        <div class="content">
+            <div class="left">
+                <h5>Bibliothèque Royale</h5>
+                <p>Gardienne du savoir depuis 1743, notre <br>
+                     bibliothèque préserve et partage le <br>
+                     patrimoine littéraire de la région.
+                </p>
+            </div>
+            <div class="center-left">
+                <h6>NAVIGATION</h6>
+                <ul>
+                    <li>Accueil</li>
+                    <li>Catalogue</li>
+                    <li>À Propos</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="center-right">
+                <h6>HORAIRES</h6>
+                <ul>
+                    <li>Lun – Ven</li>
+                    <li>Samedi</li>
+                    <li>Dimanche</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>9h – 19h</li>
+                    <li>10h – 17h</li>
+                    <li>Fermé</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">© 2026 Bibliothèque Royale de Saint-Émilien — Tous droits réservés</div>
+    </footer>
+
+    <!-- responsive:code javascript -->
+    <script>
+        var menu_toggle = document.querySelector('.navbar .menu_toggle')
+        var nav_links = document.querySelector('.navbar .nav_links')
+        menu_toggle.onclick = function(){
+            menu_toggle.classList.toggle('active')
+            nav_links .classList.toggle('responsive')
+        }
+    </script>
 </body>
 </html>
