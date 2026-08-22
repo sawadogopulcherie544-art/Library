@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/df46eb52ff.js" crossorigin="anonymous"></script>
     <title>Contact</title>
-    <link rel="stylesheet" href="../Assets/css/contact.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <!-- Partie I -->
@@ -21,12 +21,15 @@
             </div>
         </div>
 
+        <!-- menu-responsive -->
+        <div class="menu_toggle"></div>
+
         <!-- Liens de Navigation -->
-        <nav class="nav-links">
-            <a href="./accueil.html" class="nav-item active">ACCUEIL</a>
-            <a href="./catalogue.html" class="nav-item">CATALOGUE</a>
-            <a href="./A_Propos.html" class="nav-item">À PROPOS</a>
-            <a href="./contact.html" class="nav-item">CONTACT</a>
+        <nav class="nav_links">
+            <a href="accueil.html" class="nav-item ">ACCUEIL</a>
+            <a href="catalogue.html" class="nav-item">CATALOGUE</a>
+            <a href="A_Propos.html" class="nav-item">À PROPOS</a>
+            <a href="contact.html" class="nav-item active">CONTACT</a>
         </nav>
     </header>
     <main>
@@ -37,57 +40,107 @@
         </div>
 
         <div class="container">
-        <div class="image">
-            <img src="../Assets/images/coffee2.jpg">
+            <div class="image">
+                <img src="Images/coffee2.jpg">
+            </div>
 
             <div class="information">
-            <div class="text">📍    Adresse</div>
-            <p class="text1">12 Rue du Comte Armand 75004 Paris, France</p>
-            <div class="text">📞    Téléphone</div>
-            <p class="text1">+33 1 42 77 83 00</p>
-            <div class="text">✉️    Email</div>
-            <p class="text1">contact@bibliotheque-royale.fr</p>
-        </div>
-        </div>
-
-        <div class="saisie">
+                <div class="text">📍    Adresse</div>
+                <p class="text1">12 Rue du Comte Armand 75004 Paris, France</p>
+                <div class="text">📞    Téléphone</div>
+                <p class="text1">+33 1 42 77 83 00</p>
+                <div class="text">✉️    Email</div>
+                <p class="text1">contact@bibliotheque-royale.fr</p>
+            </div>
         
-            <label for="name">NOM COMPLET</label>
-            <br>
-            <input id="nom" type="text" placeholder="Ex: Marie Dupont" required>
-            <br>
-            <label for="email">EMAIL</label>
-            <br>
-            <input id="nom" type="text" placeholder="Ex: Marie Dupont07@gmail.com" required>
+            <div class="saisie">
+                <label for="name">NOM COMPLET</label>
+                <br>
+                <input id="nom" type="text" placeholder="Ex: Marie Dupont" required>
+                <br>
+                <label for="email">EMAIL</label>
+                <br>
+                <input id="nom" type="text" placeholder="Ex: Marie Dupont07@gmail.com" required>
 
-            <label for="sujet">SUJET</label>
-            <br>
-            <input id="sujet" type="text" placeholder="Choisir un sujet..." required>
-            <br>
-            <label for="message">MESSAGE</label>
-            <br>
-            <input id="message" type="text" placeholder="Votre message..." required>
-            <br>
-            <button type="submit">ENVOYER LE MESSAGE</button>
-        </div>
+                <label for="sujet">SUJET</label>
+                <br>
+                <input id="sujet" type="text" placeholder="Choisir un sujet..." required>
+                <br>
+                <label for="message">MESSAGE</label>
+                <br>
+                <input id="message" type="text" placeholder="Votre message..." required>
+                <br>
+                <button type="submit">ENVOYER LE MESSAGE</button>
+            </div>
         </div>
 
         <div class="horaire">
             <h2>Horaires d'ouverture</h2>
-           <div class="heure"><p class="text2">Lundi-Vendredi </p>
-        <div id="time">9h-19h</div>
-        </div>
-           <hr id="hr1"> 
-           <div class="heure"><p class="text2">Samedi</p>
-            <div id="time">10h-17h</div>
+            <div class="ouverture">
+                <div class="jour">Lundi – Vendredi</div>
+                <div class="heure">9h00 – 19h00</div>
             </div>
-           <hr id="hr1"> 
-            <div class="heure"><p class="text2">Dimanche & Jours fériés</p>
-            <div id="time">Fermé</div>
+            <div class="ouverture">
+                <div class="jour">Samedi</div>
+                <div class="heure">10h00 – 17h00</div>
             </div>
-            <hr id="hr1"> 
+            <div class="ouverture">
+                <div class="jour">Dimanche & jours fériés</div>
+                <div class="heure">Fermé</div>
+            </div>
         </div>
     </main>
-    <script src="../Assets/js/contact.js"></script>
+
+
+
+    <footer>
+        <div class="content">
+            <div class="left">
+                <h5>Bibliothèque Royale</h5>
+                <p>Gardienne du savoir depuis 1743, notre <br>
+                     bibliothèque préserve et partage le <br>
+                     patrimoine littéraire de la région.
+                </p>
+            </div>
+            <div class="center-left">
+                <h6>NAVIGATION</h6>
+                <ul>
+                    <li>Accueil</li>
+                    <li>Catalogue</li>
+                    <li>À Propos</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="center-right">
+                <h6>HORAIRES</h6>
+                <ul>
+                    <li>Lun – Ven</li>
+                    <li>Samedi</li>
+                    <li>Dimanche</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>9h – 19h</li>
+                    <li>10h – 17h</li>
+                    <li>Fermé</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">© 2026 Bibliothèque Royale de Saint-Émilien — Tous droits réservés</div>
+    </footer>
+
+    <script src="contact.js"></script>
+
+    <!-- code javascript pour le menu reponsif -->
+    <script>
+        var menu_toggle = document.querySelector('.navbar .menu_toggle')
+        var nav_links = document.querySelector('.navbar .nav_links')
+        menu_toggle.onclick = function(){
+            menu_toggle.classList.toggle('active')
+            nav_links.classList.toggle('responsive')
+        }
+    </script>
 </body>
 </html>
